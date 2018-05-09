@@ -12,19 +12,56 @@ class RoleTableSeeder extends Seeder
     public function run()
     {
         DB::table('role')->insert([
+
+            // 業務端
             [
-                'name' => '業務端',
-                'description' => '房貸業務來源，透過系統可以直接匯入申請物件地籍資料，並向估價端提出預估、估價報告書之申請。',
+                'end_point_code' => 'M',
+                'name' => '房貸業務主管',
+                'description' => '',
                 'created_at' => date('Y-m-d 00:00:00'),
             ],
             [
-                'name' => '估價端',
-                'description' => '接受業務端之申請，透過不動產交易資料庫之協助完成預估、估價報告書。',
+                'end_point_code' => 'M',
+                'name' => '房貸業務',
+                'description' => '',
+                'created_at' => date('Y-m-d 00:00:00'),
+            ],
+
+            // 估價端
+            [
+                'end_point_code' => 'A',
+                'name' => '會計',
+                'description' => '',
                 'created_at' => date('Y-m-d 00:00:00'),
             ],
             [
-                'name' => '授信端',
-                'description' => '對於預估或是估價報告書執行線上檢視或文件下載。',
+                'end_point_code' => 'A',
+                'name' => '審核',
+                'description' => '',
+                'created_at' => date('Y-m-d 00:00:00'),
+            ],
+            [
+                'end_point_code' => 'A',
+                'name' => '資深估價人員',
+                'description' => '',
+                'created_at' => date('Y-m-d 00:00:00'),
+            ],
+            [
+                'end_point_code' => 'A',
+                'name' => '估價人員',
+                'description' => '',
+                'created_at' => date('Y-m-d 00:00:00'),
+            ],
+            [
+                'end_point_code' => 'A',
+                'name' => '業務',
+                'description' => '',
+                'created_at' => date('Y-m-d 00:00:00'),
+            ],
+            [
+                'end_point_code' => 'A',
+                'name' => '業務助理',
+                'description' => '',
                 'created_at' => date('Y-m-d 00:00:00'),
             ],
         ]);

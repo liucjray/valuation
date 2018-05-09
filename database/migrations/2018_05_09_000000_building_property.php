@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Role extends Migration
+class BuildingProperty extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class Role extends Migration
      */
     public function up()
     {
-        Schema::create('role', function (Blueprint $table) {
+        Schema::create('building_property', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('end_point_code', 10);
+            $table->string('code', 10);
             $table->string('name', 10);
             $table->string('description', 200);
             $table->timestamps();
@@ -29,6 +29,6 @@ class Role extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('role');
+        Schema::dropIfExists('building_property');
     }
 }

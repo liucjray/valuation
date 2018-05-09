@@ -15,10 +15,10 @@ class User extends Migration
     {
         Schema::create('user', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('role_id');
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->integer('role_id');
             $table->rememberToken();
             $table->timestamps();
         });
