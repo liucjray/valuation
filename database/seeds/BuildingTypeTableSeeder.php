@@ -12,87 +12,75 @@ class BuildingTypeTableSeeder extends Seeder
     public function run()
     {
         DB::table('building_type')->insert([
-            /**
-             * 透天厝
-             */
             [
                 'name' => '透天厝',
-                'code' => '1',
-                'description' => '多為單一(或多筆)建號坐落於一筆(或多筆)地號，且其中至少一筆土地其持分為全部。',
-                'created_at' => date('Y-m-d 00:00:00'),
-            ],
-            [
-                'name' => '農舍',
-                'code' => '11',
+                'code' => 'A',
                 'description' => '',
                 'created_at' => date('Y-m-d 00:00:00'),
             ],
             [
-                'name' => '倉庫',
-                'code' => '12',
+                'name' => '公寓',
+                'code' => 'B',
+                'description' => '5樓含以下無電梯',
+                'created_at' => date('Y-m-d 00:00:00'),
+            ],
+            [
+                'name' => '套房',
+                'code' => 'C',
+                'description' => '1房(1廳)1衛',
+                'created_at' => date('Y-m-d 00:00:00'),
+            ],
+            [
+                'name' => '華廈',
+                'code' => 'D',
+                'description' => '10層含以下有電梯',
+                'created_at' => date('Y-m-d 00:00:00'),
+            ],
+            [
+                'name' => '住宅大樓',
+                'code' => 'E',
+                'description' => '11層含以上有電梯',
+                'created_at' => date('Y-m-d 00:00:00'),
+            ],
+            [
+                'name' => '店面',
+                'code' => 'F',
+                'description' => '店舖',
+                'created_at' => date('Y-m-d 00:00:00'),
+            ],
+            [
+                'name' => '辦公商業大樓',
+                'code' => 'G',
                 'description' => '',
                 'created_at' => date('Y-m-d 00:00:00'),
             ],
             [
                 'name' => '工廠',
-                'code' => '13',
+                'code' => 'H',
                 'description' => '',
                 'created_at' => date('Y-m-d 00:00:00'),
             ],
             [
-                'name' => '廠房',
-                'code' => '14',
-                'description' => '',
-                'created_at' => date('Y-m-d 00:00:00'),
-            ],
-
-            /**
-             * 社區型透天
-             */
-            [
-                'name' => '社區型透天',
-                'code' => '2',
-                'description' => '',
-                'description' => '單一建號(或含有公設建號持分)，且對應地號(一筆或多筆)可能都是以持分方式為主(非全部)。',
-                'created_at' => date('Y-m-d 00:00:00'),
-            ],
-
-            /**
-             * 集合住宅類型
-             */
-            [
-                'name' => '集合住宅類型',
-                'code' => '3',
-                'description' => '單一或多筆建號(多數含有公設) ，且對應地號(一筆或多筆)可能都是以持分方式為主(非全部)。',
-                'created_at' => date('Y-m-d 00:00:00'),
-            ],
-            [
-                'name' => '公寓',
-                'code' => '31',
+                'name' => '廠辦',
+                'code' => 'I',
                 'description' => '',
                 'created_at' => date('Y-m-d 00:00:00'),
             ],
             [
-                'name' => '華廈',
-                'code' => '32',
+                'name' => '農舍',
+                'code' => 'J',
                 'description' => '',
                 'created_at' => date('Y-m-d 00:00:00'),
             ],
             [
-                'name' => '住宅大樓',
-                'code' => '33',
+                'name' => '倉庫',
+                'code' => 'K',
                 'description' => '',
                 'created_at' => date('Y-m-d 00:00:00'),
             ],
             [
-                'name' => '辦公商業大樓',
-                'code' => '34',
-                'description' => '',
-                'created_at' => date('Y-m-d 00:00:00'),
-            ],
-            [
-                'name' => '套房',
-                'code' => '35',
+                'name' => '其他',
+                'code' => 'Z',
                 'description' => '',
                 'created_at' => date('Y-m-d 00:00:00'),
             ],

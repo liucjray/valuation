@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class EndPoint extends Migration
+class RoleGroup extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class EndPoint extends Migration
      */
     public function up()
     {
-        Schema::create('end_point', function (Blueprint $table) {
+        Schema::create('role_group', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('code', 10)->unique();
             $table->string('name', 10);
-            $table->string('code', 10);
             $table->string('description', 200);
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ class EndPoint extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('end_point');
+        Schema::dropIfExists('role_group');
     }
 }

@@ -16,19 +16,16 @@ class UserTableSeeder extends Seeder
                 'name' => 'ray',
                 'email' => 'ray@gmail.com',
                 'password' => bcrypt('secret'),
-                'role_id' => '1'
             ],
             [
                 'name' => 'kelly',
                 'email' => 'kelly@gmail.com',
                 'password' => bcrypt('secret'),
-                'role_id' => '2'
             ],
             [
                 'name' => 'alfie',
                 'email' => 'alfie@gmail.com',
                 'password' => bcrypt('secret'),
-                'role_id' => '3'
             ],
         ]);
     }

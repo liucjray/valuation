@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Role extends Migration
+class Resource extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class Role extends Migration
      */
     public function up()
     {
-        Schema::create('role', function (Blueprint $table) {
+        Schema::create('resource', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('role_group_code', 10);
-            $table->string('name', 10);
+            $table->string('name', 10)->unique();
+            $table->string('path', 255)->unique();
+            $table->string('action', 255);
+            $table->string('resource_type_code', 10);
             $table->string('description', 200);
             $table->timestamps();
         });
@@ -29,6 +31,6 @@ class Role extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('role');
+        Schema::dropIfExists('resource');
     }
 }

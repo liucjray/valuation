@@ -15,7 +15,7 @@ class CompanyDivision extends Migration
     {
         Schema::create('company_division', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedSmallInteger('company_id');
+            $table->unsignedInteger('company_id');
             $table->string('name', 10);
             $table->string('description', 200);
             $table->timestamps();

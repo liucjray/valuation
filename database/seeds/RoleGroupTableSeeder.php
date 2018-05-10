@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class EndPointTableSeeder extends Seeder
+class RoleGroupTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,16 @@ class EndPointTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('end_point')->insert([
+        DB::table('role_group')->insert([
+            // ADMIN
+            [
+                'name' => '網站管理群',
+                'code' => 'S',
+                'description' => '',
+                'created_at' => date('Y-m-d 00:00:00'),
+            ],
+
+            // 其他端點
             [
                 'name' => '業務端',
                 'code' => 'M', //Marketing

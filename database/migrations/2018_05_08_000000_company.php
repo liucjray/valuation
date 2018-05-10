@@ -15,8 +15,7 @@ class Company extends Migration
     {
         Schema::create('company', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('end_point_code', 10);
-            $table->string('name', 10);
+            $table->string('name', 10)->unique();
             $table->string('description', 200);
             $table->timestamps();
         });

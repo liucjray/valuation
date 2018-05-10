@@ -53,6 +53,12 @@ class cmdDatabaseRebuildTesting extends Command
         shell_exec("cd $path");
         $this->info("[OK] Change path to : $path");
 
+        // 執行 composer dump-autoload
+        $this->info('[START] composer dump-autoload');
+        $this->info(PHP_EOL);
+        $cmdComposerDumpAutoLoad = shell_exec("composer dump-autoload");
+        $this->info($cmdComposerDumpAutoLoad);
+        $this->info('[FINISH] composer dump-autoload');
         $this->info(PHP_EOL);
 
         // 執行 migrate
