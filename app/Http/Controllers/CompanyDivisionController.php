@@ -2,7 +2,7 @@
 
 namespace app\Http\Controllers\Voyager;
 
-use TCG\Voyager\Http\Controllers\VoyagerBaseController;
+use TCG\Voyager\Http\Controllers;
 
 class CompanyDivisionController extends VoyagerBaseController
 {

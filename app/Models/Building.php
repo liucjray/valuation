@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Voyager;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
