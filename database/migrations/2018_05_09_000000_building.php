@@ -15,8 +15,9 @@ class Building extends Migration
     {
         Schema::create('building', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('building_number', 30);
             $table->string('name', 10);
-            $table->string('description', 200);
+            $table->string('description', 200)->nullable()->default(null);;
             $table->timestamps();
         });
     }

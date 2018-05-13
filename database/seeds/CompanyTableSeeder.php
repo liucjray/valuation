@@ -15,12 +15,12 @@ class CompanyTableSeeder extends Seeder
             // 業務端
             [
                 'name' => '立榮',
-                'description' => '',
+                'description' => null,
                 'created_at' => date('Y-m-d 00:00:00'),
             ],
             [
                 'name' => '國峯',
-                'description' => '',
+                'description' => null,
                 'created_at' => date('Y-m-d 00:00:00'),
             ],
             // 授信端
@@ -28,17 +28,17 @@ class CompanyTableSeeder extends Seeder
             // 估價端
             [
                 'name' => '宏邦',
-                'description' => '',
+                'description' => null,
                 'created_at' => date('Y-m-d 00:00:00'),
             ],
             [
                 'name' => '環宇',
-                'description' => '',
+                'description' => null,
                 'created_at' => date('Y-m-d 00:00:00'),
             ],
             [
                 'name' => '展茂',
-                'description' => '',
+                'description' => null,
                 'created_at' => date('Y-m-d 00:00:00'),
             ],
         ]);

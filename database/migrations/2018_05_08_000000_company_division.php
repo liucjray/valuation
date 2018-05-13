@@ -17,7 +17,7 @@ class CompanyDivision extends Migration
             $table->increments('id');
             $table->unsignedInteger('company_id');
             $table->string('name', 10);
-            $table->string('description', 200);
+            $table->string('description', 200)->nullable()->default(null);;
             $table->timestamps();
         });
     }

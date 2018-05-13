@@ -15,8 +15,9 @@ class Land extends Migration
     {
         Schema::create('land', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('land_number', 30);
             $table->string('name', 10);
-            $table->string('description', 200);
+            $table->string('description', 200)->nullable()->default(null);;
             $table->timestamps();
         });
     }
